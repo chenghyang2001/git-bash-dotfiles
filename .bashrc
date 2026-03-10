@@ -46,8 +46,7 @@ alias autoread1='powershell -NoProfile -Command "Add-Type -AssemblyName System.W
 export PATH="$PATH:$HOME/ubuntu/dos-menu"
 
 # dotfiles 快捷操作
-alias dotsync='bash ~/workspace/git-bash-dotfiles/install.sh && source ~/.bashrc && echo "dotfiles synced!"'
-alias dotedit='vim ~/workspace/git-bash-dotfiles/.bashrc'
 alias dotpush='cd ~/workspace/git-bash-dotfiles && git add . && git commit -m "更新 bashrc" && git push && cd -'
+alias dotpull='cd ~/workspace/git-bash-dotfiles && git pull && cp .bashrc ~/.bashrc && source ~/.bashrc && cd - && echo "dotfiles synced!"'
 
 # eval "$(gh copilot alias -- bash)"
